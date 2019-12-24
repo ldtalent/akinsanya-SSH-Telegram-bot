@@ -11,7 +11,7 @@ class Telegram_model extends CI_Model
         $data = [
                     'chat_id'=>$userData['chat_id'],
                     'text'=> $userData['bot_response'],
-                    'parse_mode'=>'MarkDown',
+                    'parse_mode'=>'HTML',
                     'reply_to_message_id'=>null,
                     'reply_markup'=>null
                 ];
@@ -43,7 +43,7 @@ class Telegram_model extends CI_Model
 		$data = [
 			'chat_id'=>$userData['chat_id'],
 			'text'=>$userData['bot_response'],
-			'parse_mode'=> 'MarkDown',
+			'parse_mode'=> 'HTML',
 			'reply_to_message_id'=>null,
 			'reply_markup'=>json_encode($keyboard)
 			];
